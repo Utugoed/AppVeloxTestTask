@@ -10,10 +10,10 @@ urlpatterns = [
         name='task_detail_url'),
     path('tasks/create/', TaskCreateAPIView.as_view(),
         name='task_create_url'),
-    path('tasks/change/<str:id>/', TaskUpdateAPIView.as_view(),
-        name='task_update_url'),
     path('tasks/delete/<str:id>/', TaskDestroyAPIView.as_view(),
         name='task_delete_url'),
     path('tasks/is_done/<str:id>/', TaskIsDoneAPIView.as_view(),
-        name='task_is_done_url')
+        name='task_is_done_url'),
+    path('tasks/update/<str:id>/', TaskUpdateAPIView.as_view(),
+        name='task_update_url'),
 ]
