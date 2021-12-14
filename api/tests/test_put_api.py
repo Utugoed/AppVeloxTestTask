@@ -10,8 +10,8 @@ from ..serializers import TaskSerializer
 class TaskTests(APITestCase):
 
     def test_put_update(self):
-        date_time_1 = datetime.strptime('2021-12-12 12:12:12', '%Y-%m-%d %H:%M:%S')
-        date_time_2 = datetime.strptime('2021-12-13 13:13:13', '%Y-%m-%d %H:%M:%S')
+        date_time_1 = datetime.strptime('2021-12-20 12:12:12', '%Y-%m-%d %H:%M:%S')
+        date_time_2 = datetime.strptime('2021-12-21 13:13:13', '%Y-%m-%d %H:%M:%S')
         task_1 = Task.objects.create(title='First task',
                                     body='This is the first task',
                                     deadline=date_time_1)
@@ -26,7 +26,7 @@ class TaskTests(APITestCase):
                         "id": 1,
                         "title": "Test task",
                         "body": "This is the first task",
-                        "deadline": "2021-12-13T13:13:13Z",
+                        "deadline": "2021-12-21T13:13:13Z",
                         "is_done": False
                         }
         self.assertEqual(status.HTTP_200_OK, response.status_code)
@@ -34,8 +34,8 @@ class TaskTests(APITestCase):
 
 
     def test_patch_update(self):
-        date_time_1 = datetime.strptime('2021-12-12 12:12:12', '%Y-%m-%d %H:%M:%S')
-        date_time_2 = datetime.strptime('2021-12-13 13:13:13', '%Y-%m-%d %H:%M:%S')
+        date_time_1 = datetime.strptime('2021-12-20 12:12:12', '%Y-%m-%d %H:%M:%S')
+        date_time_2 = datetime.strptime('2021-12-21 13:13:13', '%Y-%m-%d %H:%M:%S')
         task_1 = Task.objects.create(title='First task',
                                     body='This is the first task',
                                     deadline=date_time_1)
@@ -51,7 +51,7 @@ class TaskTests(APITestCase):
                         "id": 1,
                         "title": "Test task",
                         "body": "This is the test task",
-                        "deadline": "2021-12-13T13:13:13Z",
+                        "deadline": "2021-12-21T13:13:13Z",
                         "is_done": False
                         }
         self.assertEqual(status.HTTP_200_OK, response.status_code)
@@ -59,8 +59,8 @@ class TaskTests(APITestCase):
 
 
     def test_put_is_done(self):
-        date_time_1 = datetime.strptime('2021-12-12 12:12:12', '%Y-%m-%d %H:%M:%S')
-        date_time_2 = datetime.strptime('2021-12-13 13:13:13', '%Y-%m-%d %H:%M:%S')
+        date_time_1 = datetime.strptime('2021-12-20 12:12:12', '%Y-%m-%d %H:%M:%S')
+        date_time_2 = datetime.strptime('2021-12-21 13:13:13', '%Y-%m-%d %H:%M:%S')
         task_1 = Task.objects.create(title='First task',
                                     body='This is the first task',
                                     deadline=date_time_1)
@@ -76,7 +76,7 @@ class TaskTests(APITestCase):
                         "id": 1,
                         "title": "First task",
                         "body": "This is the first task",
-                        "deadline": "2021-12-12T12:12:12Z",
+                        "deadline": "2021-12-20T12:12:12Z",
                         "is_done": True
                         }
         self.assertEqual(status.HTTP_200_OK, response.status_code)
@@ -84,8 +84,8 @@ class TaskTests(APITestCase):
 
 
     def test_patch_is_done(self):
-        date_time_1 = datetime.strptime('2021-12-12 12:12:12', '%Y-%m-%d %H:%M:%S')
-        date_time_2 = datetime.strptime('2021-12-13 13:13:13', '%Y-%m-%d %H:%M:%S')
+        date_time_1 = datetime.strptime('2021-12-20 12:12:12', '%Y-%m-%d %H:%M:%S')
+        date_time_2 = datetime.strptime('2021-12-21 13:13:13', '%Y-%m-%d %H:%M:%S')
         task_1 = Task.objects.create(title='First task',
                                     body='This is the first task',
                                     deadline=date_time_1)
@@ -101,7 +101,7 @@ class TaskTests(APITestCase):
                         "id": 1,
                         "title": "First task",
                         "body": "This is the first task",
-                        "deadline": "2021-12-12T12:12:12Z",
+                        "deadline": "2021-12-20T12:12:12Z",
                         "is_done": True
                         }
         self.assertEqual(status.HTTP_200_OK, response.status_code)

@@ -10,7 +10,7 @@ from ..serializers import TaskSerializer
 class TaskTests(APITestCase):
 
     def test_post(self):
-        date_time_1 = datetime.strptime('2021-12-12 12:12:12', '%Y-%m-%d %H:%M:%S')
+        date_time_1 = datetime.strptime('2021-12-20 12:12:12', '%Y-%m-%d %H:%M:%S')
         url = reverse('task_create_url')
         response = self.client.post(url, {
                                             "title": "Test task",
@@ -21,7 +21,7 @@ class TaskTests(APITestCase):
                         "id": 1,
                         "title": "Test task",
                         "body": "This is the test task",
-                        "deadline": "2021-12-12T12:12:12Z",
+                        "deadline": "2021-12-20T12:12:12Z",
                         "is_done": False
                         }
         self.assertEqual(status.HTTP_201_CREATED, response.status_code)

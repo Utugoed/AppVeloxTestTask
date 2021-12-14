@@ -1,7 +1,6 @@
 from django.urls import path
 
-from .views import TaskCreateAPIView, TaskDestroyAPIView, TaskIsDoneAPIView
-from .views import TaskListAPIView, TaskRetrieveAPIView, TaskUpdateAPIView
+from .views import *
 
 
 urlpatterns = [
